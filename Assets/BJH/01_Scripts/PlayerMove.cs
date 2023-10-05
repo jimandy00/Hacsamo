@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using UnityEngine.UI;
 
 // wasd키로 플레이어를 움직인다.
 public class PlayerMove : MonoBehaviourPun
@@ -14,6 +15,9 @@ public class PlayerMove : MonoBehaviourPun
     // charactor controller
     public CharacterController cc;
 
+    // nick name
+    public Text nickName;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +28,8 @@ public class PlayerMove : MonoBehaviourPun
         {
             cam.gameObject.SetActive(true);
         }
+
+        nickName.text = photonView.Owner.NickName;
     }
 
     // Update is called once per frame
@@ -35,9 +41,12 @@ public class PlayerMove : MonoBehaviourPun
             return;        
         }
 
+        if(Cursor.visible == false) { return; }
+        
         // input
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
+        print(h + ", " + v);
 
         // dir
         Vector3 dir = new Vector3(h, 0, v);
