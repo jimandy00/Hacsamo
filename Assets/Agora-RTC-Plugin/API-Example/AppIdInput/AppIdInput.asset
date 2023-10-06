@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 310468f085ef24732beac714c9bb64fd, type: 3}
+  m_Name: AppIdInput
+  m_EditorClassIdentifier: 
+  appID: cd1e3eb2ec044645950453cda23822c2
+  token: 007eJxTYJCoubVdzyhRKm71c78r0z795VqyQkzBMFpmoe1brlvaoW8UGJJTDFONU5OMUpMNTEzMTEwtTQ1MTI2TUxKNjC2MjJKNNiTKpzYEMjI8bWdkYmSAQBCfncEjMbk4MTefgQEAXmMfFg==
+  channelName: Hacsamo
