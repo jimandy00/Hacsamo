@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/00_Scenes/MergeScene0922/ConnectionScene.unity
     guid: 7bccd87c96cb3fc4a80a9f7c851744bd
   - enabled: 0
@@ -14,10 +14,16 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/00_Scenes/MergeScene0922/Map2.unity
     guid: ea2231939cd862f42a8d683d8b85c5cf
-  - enabled: 1
+  - enabled: 0
     path: Assets/PSW/01_Scene/Map1.unity
     guid: 9a5d7bace73fe464699679dd4c86437a
-  - enabled: 1
+  - enabled: 0
     path: Assets/PSW/01_Scene/Map2.unity
     guid: 439b8347297f13c46acf98638054105a
+  - enabled: 1
+    path: Assets/KSH/Scenes/ConnectionScene.unity
+    guid: 1047aa79088f01644aa670e2b468742e
+  - enabled: 1
+    path: Assets/KSH/Scenes/Map1.unity
+    guid: e36b52a5eb54ed049bc5511eb101e330
   m_configObjects: {}
