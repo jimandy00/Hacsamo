@@ -24,9 +24,9 @@ public class PanelGesture : MonoBehaviour
     {
         panelAllGestures.Show(gameObject);
 
-        RectTransform myRectTransform = gameObject.GetComponent<RectTransform>();
+        //RectTransform myRectTransform = gameObject.GetComponent<RectTransform>();
 
-        myRectTransform.anchoredPosition = new Vector2(-960,600);
+        //myRectTransform.anchoredPosition = new Vector2(-960,600);
     }
 
 

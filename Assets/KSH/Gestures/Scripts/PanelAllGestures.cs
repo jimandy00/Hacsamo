@@ -31,6 +31,7 @@ public class PanelAllGestures : MonoBehaviour
 
         yield return null;
 
+        /*
         if (basicGridAdapter.Data.Count == 0)
         {
             foreach (ListItem item in GestureManager.Instance.gestureList)
@@ -42,6 +43,7 @@ public class PanelAllGestures : MonoBehaviour
                 basicGridAdapter.Data.InsertOneAtEnd(model);
             }
         }
+        */
 
 
     }
@@ -51,9 +53,9 @@ public class PanelAllGestures : MonoBehaviour
     {
         GestureManager.RemovePanel(gameObject);
 
-        RectTransform preRectTransform = preGo.GetComponent<RectTransform>();
+        //RectTransform preRectTransform = preGo.GetComponent<RectTransform>();
 
-        preRectTransform.anchoredPosition = new Vector2(-233, 220);
+        //preRectTransform.anchoredPosition = new Vector2(-233, 220);
 
         MakeDim(false);
 
@@ -72,9 +74,16 @@ public class PanelAllGestures : MonoBehaviour
             panelImage.color = new Color(128f / 255f, 128f / 255f, 128f / 255f, 0.5f);
 
         }
+
         else
         {
             panelImage.color = new Color(0f, 0f, 0f, 0f);
         }
+    }
+
+    public void OnClickButtonSearch() 
+    {
+        
+    
     }
 }
