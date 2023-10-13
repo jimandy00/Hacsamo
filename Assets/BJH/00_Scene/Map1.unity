@@ -17535,7 +17535,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51684c34d5d52411f905a5ba6aa4562e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _appIdInput: {fileID: 0}
+  _appIdInput: {fileID: 11400000, guid: 300c6525f002a4dbaac41a5c4b054e35, type: 2}
   _appID: cd1e3eb2ec044645950453cda23822c2
   _token: 007eJxTYJCoubVdzyhRKm71c78r0z795VqyQkzBMFpmoe1brlvaoW8UGJJTDFONU5OMUpMNTEzMTEwtTQ1MTI2TUxKNjC2MjJKNNiTKpzYEMjI8bWdkYmSAQBCfncEjMbk4MTefgQEAXmMfFg==
   _channelName: Hacsamo
@@ -28746,7 +28746,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -150, y: 0}
+  m_AnchoredPosition: {x: -470, y: -522}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &806189157
@@ -37815,7 +37815,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -341, y: 0}
+  m_AnchoredPosition: {x: -661, y: -522}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1026491107

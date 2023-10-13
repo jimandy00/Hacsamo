@@ -1,0 +1,44 @@
+[2023-10-13 09:40:32.481] [12536] [info] [iris_logger.cc:116] reset logger with path .\agora-iris-rtc.log
+[2023-10-13 09:40:32.481] [12536] [info] [iris_logger.cc:116] reset logger with path .\agora-iris-rtc.log
+[2023-10-13 09:40:32.481] [12536] [info] [iris_logger.cc:116] reset logger with path .\agora-iris-rtc.log
+[2023-10-13 09:40:32.544] [12536] [info] [iris_rtc_device_manager_impl.cc:29] IrisRtcDeviceManagerImpl Initialize
+[2023-10-13 09:40:32.545] [12536] [info] [iris_rtc_media_player_impl.cc:30] IrisMediaPlayerImpl Initialize
+[2023-10-13 09:40:32.545] [12536] [info] [iris_rtc_spatial_audio_engine_impl.cc:205] IrisLocalSpatialAudioEngineImpl Initialize
+[2023-10-13 09:40:32.545] [12536] [info] [iris_rtc_media_recorder_impl.cc:17] IrisMediaRecorderImpl Initialize
+[2023-10-13 09:40:32.545] [12536] [info] [iris_rtc_music_center_impl.cc:20] IrisMusicPlayerImpl Initialize
+[2023-10-13 09:40:32.545] [12536] [info] [iris_rtc_engine_impl.cc:112] api name RtcEngine_initialize ret 0 result {"result":0}
+[2023-10-13 09:40:32.552] [12536] [info] [iris_rtc_engine_impl.cc:96] api name RtcEngine_setAppType params {"appType":2}
+[2023-10-13 09:40:32.552] [12536] [info] [iris_rtc_engine_impl.cc:112] api name RtcEngine_setAppType ret 0 result {"result":0}
+[2023-10-13 09:40:32.554] [12536] [info] [iris_rtc_engine_impl.cc:96] api name RtcEngine_registerEventHandler params {"event":1792123935072}
+[2023-10-13 09:40:32.554] [12536] [info] [iris_rtc_engine_impl.cc:112] api name RtcEngine_registerEventHandler ret 0 result {"result":0}
+[2023-10-13 09:40:32.554] [12536] [info] [iris_rtc_engine_impl.cc:96] api name RtcEngine_setClientRole params {"role":1}
+[2023-10-13 09:40:32.554] [12536] [info] [iris_rtc_engine_impl.cc:112] api name RtcEngine_setClientRole ret 0 result {"result":0}
+[2023-10-13 09:40:32.554] [12536] [info] [iris_rtc_engine_impl.cc:96] api name RtcEngine_enableAudio params {}
+[2023-10-13 09:40:32.555] [12536] [info] [iris_rtc_engine_impl.cc:112] api name RtcEngine_enableAudio ret 0 result {"result":0}
+[2023-10-13 09:40:32.555] [12536] [info] [iris_rtc_engine_impl.cc:96] api name RtcEngine_enableVideo params {}
+[2023-10-13 09:40:32.555] [12536] [info] [iris_rtc_engine_impl.cc:112] api name RtcEngine_enableVideo ret 0 result {"result":0}
+[2023-10-13 09:40:32.555] [12536] [info] [iris_rtc_engine_impl.cc:94] api name RtcEngine_joinChannel params {"token":"007e***************/g==","channelId":"Hacsamo","info":"","uid":0}
+[2023-10-13 09:40:32.591] [12536] [info] [iris_rtc_engine_impl.cc:112] api name RtcEngine_joinChannel ret 0 result {"result":0}
+[2023-10-13 09:40:32.715] [12536] [info] [rtc_engine_event_handler.cc:51] channel Hacsamo uid 901137367
+[2023-10-13 09:40:32.726] [12536] [info] [rtc_engine_event_handler.cc:1667] channel Hacsamo uid 901137367 remoteUid 10
+[2023-10-13 09:40:33.156] [12536] [info] [iris_rtc_engine_impl.cc:96] api name RtcEngine_getVersion params {}
+[2023-10-13 09:40:33.156] [12536] [info] [iris_rtc_engine_impl.cc:112] api name RtcEngine_getVersion ret 0 result {"build":272567,"result":"4.2.2"}
+[2023-10-13 09:40:35.011] [12536] [info] [iris_rtc_engine_impl.cc:96] api name RtcEngine_release params {"sync":false}
+[2023-10-13 09:40:35.011] [12536] [info] [iris_rtc_engine_impl.cc:195] IrisRtcEngineImpl __release
+[2023-10-13 09:40:35.011] [12536] [info] [iris_rtc_device_manager_impl.cc:36] IrisRtcDeviceManagerImpl Release
+[2023-10-13 09:40:35.011] [12536] [info] [iris_rtc_device_manager_wrapper.cc:791] IDeviceManagerWrapper release
+[2023-10-13 09:40:35.012] [12536] [info] [iris_rtc_media_player_impl.cc:41] IrisMediaPlayerImpl Release
+[2023-10-13 09:40:35.012] [12536] [info] [iris_rtc_media_player_wrapper.cc:38] IMediaPlayerWrapper release
+[2023-10-13 09:40:35.012] [12536] [info] [iris_rtc_spatial_audio_engine_impl.cc:212] IrisLocalSpatialAudioEngineImpl Release
+[2023-10-13 09:40:35.012] [12536] [info] [iris_rtc_spatial_audio_engine_wrapper.cc:388] ILocalSpatialAudioEngineWrapper release
+[2023-10-13 09:40:35.012] [12536] [info] [iris_rtc_media_recorder_impl.cc:24] IrisMediaRecorderImpl Release
+[2023-10-13 09:40:35.012] [12536] [info] [iris_rtc_music_center_impl.cc:26] IrisMusicCenterImpl Release
+[2023-10-13 09:40:35.012] [12536] [info] [iris_rtc_music_center_wrapper.cc:27] IrisMusicContentCenterWrapper release
+[2023-10-13 09:40:35.012] [12536] [info] [iris_rtc_engine_wrapper.cc:8077] IRtcEngineWrapper release
+[2023-10-13 09:40:35.024] [12536] [info] [iris_rtc_engine_impl.cc:112] api name RtcEngine_release ret 0 result {"result":0}
+[2023-10-13 09:40:35.024] [12536] [info] [iris_rtc_engine_impl.cc:42] IrisRtcEngineImpl Destroy
+[2023-10-13 09:40:35.024] [12536] [info] [iris_rtc_music_center_impl.cc:16] IrisMusiImpl Destroy
+[2023-10-13 09:40:35.024] [12536] [info] [iris_rtc_media_recorder_impl.cc:13] IrisMediaRecodrerImpl Destroy
+[2023-10-13 09:40:35.024] [12536] [info] [iris_rtc_spatial_audio_engine_impl.cc:201] IrisLocalSpatialAudioEngineImpl Destroy
+[2023-10-13 09:40:35.024] [12536] [info] [iris_rtc_media_player_impl.cc:26] IrisMediaPlayerImpl Destroy
+[2023-10-13 09:40:35.024] [12536] [info] [iris_rtc_device_manager_impl.cc:25] IrisRtcDeviceManagerImpl Destroy
