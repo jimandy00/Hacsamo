@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class UIManager : MonoBehaviour
 {
     public GameObject profileUI;
+
+    public GameObject miniMapScript;
 
     // 프로필 시작할 때 꺼두기
     private void Start()
@@ -44,5 +47,23 @@ public class UIManager : MonoBehaviour
     public void profileHide() 
     { 
         profileUI.SetActive(false);
+    }
+
+    private void Update()
+    {
+        if(Input.GetMouseButtonDown(0))
+        {
+            if(EventSystem.current.IsPointerOverGameObject() == false)
+            {
+                miniMapScript.GetComponent<MinimapCamera>().enabled = false;
+            }
+
+        }
+    }
+
+    // 버튼을 누르면 미니맵 카메라가 작동되게 하기
+    public void MinimapCam()
+    {
+        miniMapScript.GetComponent<MinimapCamera>().enabled = true;
     }
 }

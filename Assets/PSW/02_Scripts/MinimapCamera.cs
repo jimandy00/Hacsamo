@@ -1,3 +1,4 @@
+using Photon.Pun.UtilityScripts;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -17,10 +18,6 @@ public class MinimapCamera : MonoBehaviour
 
     void Start()
     {
-        // 버튼을 클릭했을 때 줌 되게 하는 함수 호출
-        Button button = GetComponent<Button>();
-        button.onClick.AddListener(Zoom);
-
         // miniMapCamera 
         miniMapCam = GetComponent<Camera>();
     }
