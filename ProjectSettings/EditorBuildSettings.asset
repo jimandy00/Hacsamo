@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/00_Scenes/MergeScene0922/ConnectionScene.unity
-    guid: 7bccd87c96cb3fc4a80a9f7c851744bd
+    path: Assets/BJH/00_Scene/LoginScene.unity
+    guid: cae145a0580859549b4e280d752f5c09
   - enabled: 1
     path: Assets/BJH/00_Scene/Map1.unity
     guid: 962d7ad862187d74894dec6c4dd23c93
