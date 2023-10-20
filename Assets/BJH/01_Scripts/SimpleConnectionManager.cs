@@ -6,10 +6,25 @@ using Photon.Realtime;
 
 public class SimpleConnectionManager : MonoBehaviourPunCallbacks
 {
+    public static SimpleConnectionManager instance;
+
+    void Awake()
+    {
+        if(instance == null)
+        {
+            instance = this;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         // Photon 환경설정을 기반으로 접속 시도
+        //PhotonNetwork.ConnectUsingSettings();
+    }
+
+    public void StartConnection()
+    {
         PhotonNetwork.ConnectUsingSettings();
     }
 
