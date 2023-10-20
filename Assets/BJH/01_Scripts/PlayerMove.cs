@@ -46,7 +46,6 @@ public class PlayerMove : MonoBehaviourPun
         // input
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
-        print(h + ", " + v);
 
         // dir
         Vector3 dir = new Vector3(h, 0, v);
