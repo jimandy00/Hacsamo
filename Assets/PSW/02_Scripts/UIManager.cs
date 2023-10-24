@@ -4,17 +4,25 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
+using Agora_RTC_Plugin.API_Example.Examples.Advanced.VoiceChanger;
 
 public class UIManager : MonoBehaviour
 {
+    // profileUI 오브젝트
     public GameObject profileUI;
-
+    // 미니맵 스크립트
     public GameObject miniMapScript;
+    // voiceUI 오브젝트
+    public GameObject voiceUI;
+    // voiceUIOff 오브젝트
+    public GameObject voiceUIOff;
+
 
     // 프로필 시작할 때 꺼두기
     private void Start()
     {
         profileUI.SetActive(false);
+        voiceUI.SetActive(false);
     }
 
     // 맵 2로 전환
@@ -44,16 +52,16 @@ public class UIManager : MonoBehaviour
     }
 
     // profile UI 끄기
-    public void profileHide() 
-    { 
+    public void profileHide()
+    {
         profileUI.SetActive(false);
     }
 
     private void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
-            if(EventSystem.current.IsPointerOverGameObject() == false)
+            if (EventSystem.current.IsPointerOverGameObject() == false)
             {
                 miniMapScript.GetComponent<MinimapCamera>().enabled = false;
             }
@@ -65,5 +73,18 @@ public class UIManager : MonoBehaviour
     public void MinimapCam()
     {
         miniMapScript.GetComponent<MinimapCamera>().enabled = true;
+    }
+
+    // 버튼을 누르면 voiceUIOff 시키게 하기
+    public void voiceOff()
+    {
+        voiceUIOff.SetActive(true);
+        voiceUI.SetActive(false);
+    }
+
+    public void voiceOn()
+    {
+        voiceUI.SetActive(true);
+        voiceUIOff.SetActive(false);
     }
 }
