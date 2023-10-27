@@ -64892,6 +64892,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: ItemInGestureList
       objectReference: {fileID: 0}
+    - target: {fileID: 2308589187672048438, guid: 32cf2cffc6c3a674fbbd668a2887a333, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6849478525821549003, guid: 32cf2cffc6c3a674fbbd668a2887a333, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32cf2cffc6c3a674fbbd668a2887a333, type: 3}
 --- !u!224 &1692433509 stripped

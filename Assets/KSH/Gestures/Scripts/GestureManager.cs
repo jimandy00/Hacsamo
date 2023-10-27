@@ -96,7 +96,7 @@ public class GestureManager : MonoBehaviour
 
 
 
-        public void OnGestureButtonClicked() 
+    public void OnGestureButtonClicked() 
     {
         Debug.Log("panelGesture show call!!");
         panelGesture.Show();
