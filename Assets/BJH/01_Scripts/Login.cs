@@ -14,6 +14,7 @@ public class Login : MonoBehaviour
     {
         loading.SetActive(false);
 
+        logins[0].onSubmit.AddListener(delegate { TryLogin(); }); // 이메일을 입력했을 때 TryLogin() 실행
         logins[1].onSubmit.AddListener(delegate { TryLogin(); }); // 패스워드 입력했을 때 TryLogin() 실행
     }
 
@@ -30,6 +31,8 @@ public class Login : MonoBehaviour
             Debug.LogError("input email or password");
             return;
         }
+
+        print("email : " + logins[0].text + "   password : " + logins[1].text);
 
         StartCoroutine(SendRequest(logins[0].text, logins[1].text));
     }
@@ -49,16 +52,31 @@ public class Login : MonoBehaviour
         yield return webRequest.SendWebRequest();
 
         // 요청이 완료 되었는지 확인
-        if(webRequest.result == UnityWebRequest.Result.Success)
+        if (webRequest.result == UnityWebRequest.Result.Success)
         {
             // 응답 텍스트 출력
             Debug.Log("Response : " + UnityWebRequest.Result.Success);
 
             LoginResponse response = JsonUtility.FromJson<LoginResponse>(webRequest.downloadHandler.text);
 
-            if (response.msg != "Login Failed")
+            if (response.result == "200")
             {
-                LoginSuccess();
+                //LoginSuccess();
+
+                // 로딩 UI 활성화
+                loading.SetActive(true);
+
+                if (webRequest.result == UnityWebRequest.Result.Success)
+                {
+                    // Photon
+                    // 다음 씬으로 이동
+                    SimpleConnectionManager.instance.StartConnection();
+                }
+                else
+                {
+                    Debug.Log("아이디 혹은 비밀번호를 다시 확인해주세요.");
+                }
+
             }
             else
             {
@@ -74,19 +92,6 @@ public class Login : MonoBehaviour
     {
         // 씬 로드를 비동기로 시작
     }
-
-    // 로그인 버튼 누를 때 호출되는 함수
-    public void OnclickLoginBtn()
-    {
-        // 로딩 UI 활성화
-        loading.SetActive(true);
-
-        // Photon
-        // 다음 씬으로 이동
-        SimpleConnectionManager.instance.StartConnection();
-    }
-
-
 
 
 
