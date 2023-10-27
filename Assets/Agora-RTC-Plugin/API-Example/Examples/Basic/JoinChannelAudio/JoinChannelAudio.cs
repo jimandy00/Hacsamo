@@ -34,7 +34,7 @@ namespace Agora_RTC_Plugin.API_Example.Examples.Basic.JoinChannelAudio
 
         private IAudioDeviceManager _audioDeviceManager;
         private DeviceInfo[] _audioPlaybackDeviceInfos;
-        public Dropdown _audioDeviceSelect;
+        public DropdownMa _audioDeviceSelect;
 
         // Start is called before the first frame update
         private void Start()
@@ -148,7 +148,7 @@ namespace Agora_RTC_Plugin.API_Example.Examples.Basic.JoinChannelAudio
             }
 
             _audioDeviceSelect.AddOptions(_audioPlaybackDeviceInfos.Select(w =>
-                    new Dropdown.OptionData(
+                    new DropdownMa.OptionData(
                         string.Format("{0} :{1}", w.deviceName, w.deviceId)))
                 .ToList());
         }

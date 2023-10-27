@@ -42,8 +42,8 @@ namespace Agora_RTC_Plugin.API_Example.Examples.Advanced.MusicPlayer
 
 
         public Button GetMusicChartsButton;
-        public Dropdown MusicChartsSelect;
-        public Dropdown MusicCollectionSelect;
+        public DropdownMa MusicChartsSelect;
+        public DropdownMa MusicCollectionSelect;
         public Text SelectedMusic;
         public Button PreloadButton;
         public Button IsPreloadButton;
@@ -523,10 +523,10 @@ namespace Agora_RTC_Plugin.API_Example.Examples.Advanced.MusicPlayer
 
             this._sample.MusicChartsSelect.gameObject.SetActive(true);
             this._sample.MusicChartsSelect.ClearOptions();
-            List<Dropdown.OptionData> optionDatas = new List<Dropdown.OptionData>();
+            List<DropdownMa.OptionData> optionDatas = new List<DropdownMa.OptionData>();
             foreach (var info in result)
             {
-                optionDatas.Add(new Dropdown.OptionData(info.chartName));
+                optionDatas.Add(new DropdownMa.OptionData(info.chartName));
             }
             this._sample.MusicChartsSelect.AddOptions(optionDatas);
 
@@ -548,10 +548,10 @@ namespace Agora_RTC_Plugin.API_Example.Examples.Advanced.MusicPlayer
             this._sample.CurMusicCollection = result;
             this._sample.MusicCollectionSelect.gameObject.SetActive(true);
             this._sample.MusicCollectionSelect.ClearOptions();
-            List<Dropdown.OptionData> optionDatas = new List<Dropdown.OptionData>();
+            List<DropdownMa.OptionData> optionDatas = new List<DropdownMa.OptionData>();
             foreach (var info in result.music)
             {
-                optionDatas.Add(new Dropdown.OptionData(info.name));
+                optionDatas.Add(new DropdownMa.OptionData(info.name));
             }
             this._sample.MusicCollectionSelect.ClearOptions();
             this._sample.MusicCollectionSelect.AddOptions(optionDatas);
