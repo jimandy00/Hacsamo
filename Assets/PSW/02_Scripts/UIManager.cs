@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
-using static System.Net.Mime.MediaTypeNames;
 
 public class UIManager : MonoBehaviour
 {
@@ -16,6 +15,14 @@ public class UIManager : MonoBehaviour
     public GameObject voiceUI;
     // voiceUIOff 오브젝트
     public GameObject voiceUIOff;
+    // pop-Up 오브젝트
+    public GameObject popUpUI;
+    // miniMap UI 오브젝트
+    public GameObject miniMapUI;
+    // lunch UI 오브젝트
+    public GameObject lunchUI;
+    // nofity UI 오브젝트
+    public GameObject nofityUI;
 
 
     // 프로필 시작할 때 꺼두기
@@ -23,6 +30,8 @@ public class UIManager : MonoBehaviour
     {
         profileUI.SetActive(false);
         voiceUI.SetActive(false);
+        popUpUI.SetActive(false);
+        miniMapUI.SetActive(false);
     }
 
     // 맵 2로 전환
@@ -39,12 +48,6 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadScene("Map1");
     }
 
-    // 게임창 나가기
-    public void OnClickOut()
-    {
-        Application.Quit();
-    }
-
     // profile UI 켜기
     public void profileShow()
     {
@@ -57,6 +60,23 @@ public class UIManager : MonoBehaviour
         profileUI.SetActive(false);
     }
 
+    // PopUp UI 켜기
+    public void popUp()
+    {
+        popUpUI.SetActive(true);
+    }
+
+    // PopUp UI 끄기
+    public void popUpOff()
+    {
+        popUpUI.SetActive(false);
+    }
+
+    // miniMapUI 켜기
+    public void miniMapUIShow()
+    {
+        miniMapUI.SetActive(true);
+    }
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -86,5 +106,11 @@ public class UIManager : MonoBehaviour
     {
         voiceUI.SetActive(true);
         voiceUIOff.SetActive(false);
+    }
+
+    // 게임창 나가기
+    public void OnClickOut()
+    {
+        Application.Quit();
     }
 }
