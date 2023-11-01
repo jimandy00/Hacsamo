@@ -19,8 +19,8 @@ public class UIManager : MonoBehaviour
     public GameObject popUpUI;
     // miniMap UI 오브젝트
     public GameObject miniMapUI;
-    // lunch UI 오브젝트
-    public GameObject lunchUI;
+    // food UI 오브젝트
+    public GameObject foodUI;
     // nofity UI 오브젝트
     public GameObject nofityUI;
 
@@ -32,6 +32,7 @@ public class UIManager : MonoBehaviour
         voiceUI.SetActive(false);
         popUpUI.SetActive(false);
         miniMapUI.SetActive(false);
+        foodUI.SetActive(false);
     }
 
     // 맵 2로 전환
@@ -52,12 +53,14 @@ public class UIManager : MonoBehaviour
     public void profileShow()
     {
         profileUI.SetActive(true);
+        popUpUI.SetActive(false);
     }
 
     // profile UI 끄기
     public void profileHide()
     {
         profileUI.SetActive(false);
+        popUpUI.SetActive(true);
     }
 
     // PopUp UI 켜기
@@ -76,7 +79,9 @@ public class UIManager : MonoBehaviour
     public void miniMapUIShow()
     {
         miniMapUI.SetActive(true);
+        popUpUI.SetActive(false);
     }
+
     private void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -84,8 +89,9 @@ public class UIManager : MonoBehaviour
             if (EventSystem.current.IsPointerOverGameObject() == false)
             {
                 miniMapScript.GetComponent<MinimapCamera>().enabled = false;
+                miniMapUI.SetActive(false);
+                popUpUI.SetActive(true);
             }
-
         }
     }
 
@@ -102,10 +108,23 @@ public class UIManager : MonoBehaviour
         voiceUI.SetActive(false);
     }
 
+    // 버튼을 누르면 voiceOnUI 켜기
     public void voiceOn()
     {
         voiceUI.SetActive(true);
         voiceUIOff.SetActive(false);
+    }
+
+    // lunchUI 켜지게 하기
+    public void FoodOn()
+    {
+        foodUI.SetActive(true);
+    }
+
+    // lunchUI 끄게 하기
+    public void FoodOff()
+    {
+        foodUI.SetActive(false);
     }
 
     // 게임창 나가기
