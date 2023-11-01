@@ -158,14 +158,18 @@ public class UIManager : MonoBehaviour
     public void NumberUIOn()
     {
         numberUI.SetActive(true);
+        numberUIOff.SetActive(false);
         numberShowText.SetActive(true);
+        numberHideText.SetActive(false);
     }
 
     // number 학번 UI 안 보이게 끄기
     public void NumberUIOff()
     {
         numberUI.SetActive(false);
+        numberUI.SetActive(true);
         numberHideText.SetActive(true);
+        numberShowText.SetActive(false);
     }
 
 
