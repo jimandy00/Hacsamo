@@ -33,6 +33,7 @@ public class UIManager : MonoBehaviour
         popUpUI.SetActive(false);
         miniMapUI.SetActive(false);
         foodUI.SetActive(false);
+        nofityUI.SetActive(false);
     }
 
     // 맵 2로 전환
@@ -127,6 +128,19 @@ public class UIManager : MonoBehaviour
         foodUI.SetActive(false);
     }
 
+    // nofityUI 켜기
+    public void nofityUIOn()
+    {
+        nofityUI.SetActive(true);
+        popUpUI.SetActive(false);
+    }
+
+    // nofityUI 끄기
+    public void nofityUIOff()
+    {
+        nofityUI.SetActive(false);
+        popUpUI.SetActive(true);
+    }
     // 게임창 나가기
     public void OnClickOut()
     {
