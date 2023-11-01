@@ -23,6 +23,16 @@ public class UIManager : MonoBehaviour
     public GameObject foodUI;
     // nofity UI 오브젝트
     public GameObject nofityUI;
+    // number UI 오브젝트
+    public GameObject numberUI;
+    // number UI 오브젝트
+    public GameObject numberUIOff;
+
+    // 학번 안 보이게 하는 텍스트 (학번 가리기)
+    public GameObject numberHideText;
+    // 학번 보이게 하는 텍스트 (학번 보이기)
+    public GameObject numberShowText;
+
 
 
     // 프로필 시작할 때 꺼두기
@@ -34,6 +44,8 @@ public class UIManager : MonoBehaviour
         miniMapUI.SetActive(false);
         foodUI.SetActive(false);
         nofityUI.SetActive(false);
+        numberUI.SetActive(false);
+        numberShowText.SetActive(false);
     }
 
     // 맵 2로 전환
@@ -141,6 +153,22 @@ public class UIManager : MonoBehaviour
         nofityUI.SetActive(false);
         popUpUI.SetActive(true);
     }
+
+    // number 학번 UI 보이게 켜기
+    public void NumberUIOn()
+    {
+        numberUI.SetActive(true);
+        numberShowText.SetActive(true);
+    }
+
+    // number 학번 UI 안 보이게 끄기
+    public void NumberUIOff()
+    {
+        numberUI.SetActive(false);
+        numberHideText.SetActive(true);
+    }
+
+
     // 게임창 나가기
     public void OnClickOut()
     {
