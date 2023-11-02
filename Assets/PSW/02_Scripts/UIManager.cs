@@ -33,6 +33,8 @@ public class UIManager : MonoBehaviour
     // 학번 보이게 하는 텍스트 (학번 보이기)
     public GameObject numberShowText;
 
+    // url 입력
+    public string url = "https://www.sogang.ac.kr/bachelor/index.html";
 
 
     // 프로필 시작할 때 꺼두기
@@ -177,5 +179,11 @@ public class UIManager : MonoBehaviour
     public void OnClickOut()
     {
         Application.Quit();
+    }
+
+    // url 열기
+    public void OnClickLink()
+    {
+        Application.OpenURL(url);
     }
 }
