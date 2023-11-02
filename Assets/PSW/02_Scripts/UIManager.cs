@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
-using static System.Net.Mime.MediaTypeNames;
 
 public class UIManager : MonoBehaviour
 {
@@ -16,6 +15,24 @@ public class UIManager : MonoBehaviour
     public GameObject voiceUI;
     // voiceUIOff 오브젝트
     public GameObject voiceUIOff;
+    // pop-Up 오브젝트
+    public GameObject popUpUI;
+    // miniMap UI 오브젝트
+    public GameObject miniMapUI;
+    // food UI 오브젝트
+    public GameObject foodUI;
+    // nofity UI 오브젝트
+    public GameObject nofityUI;
+    // number UI 오브젝트
+    public GameObject numberUI;
+    // number UI 오브젝트
+    public GameObject numberUIOff;
+
+    // 학번 안 보이게 하는 텍스트 (학번 가리기)
+    public GameObject numberHideText;
+    // 학번 보이게 하는 텍스트 (학번 보이기)
+    public GameObject numberShowText;
+
 
 
     // 프로필 시작할 때 꺼두기
@@ -23,6 +40,12 @@ public class UIManager : MonoBehaviour
     {
         profileUI.SetActive(false);
         voiceUI.SetActive(false);
+        popUpUI.SetActive(false);
+        miniMapUI.SetActive(false);
+        foodUI.SetActive(false);
+        nofityUI.SetActive(false);
+        numberUI.SetActive(false);
+        numberShowText.SetActive(false);
     }
 
     // 맵 2로 전환
@@ -39,22 +62,37 @@ public class UIManager : MonoBehaviour
         SceneManager.LoadScene("Map1");
     }
 
-    // 게임창 나가기
-    public void OnClickOut()
-    {
-        Application.Quit();
-    }
-
     // profile UI 켜기
     public void profileShow()
     {
         profileUI.SetActive(true);
+        popUpUI.SetActive(false);
     }
 
     // profile UI 끄기
     public void profileHide()
     {
         profileUI.SetActive(false);
+        popUpUI.SetActive(true);
+    }
+
+    // PopUp UI 켜기
+    public void popUp()
+    {
+        popUpUI.SetActive(true);
+    }
+
+    // PopUp UI 끄기
+    public void popUpOff()
+    {
+        popUpUI.SetActive(false);
+    }
+
+    // miniMapUI 켜기
+    public void miniMapUIShow()
+    {
+        miniMapUI.SetActive(true);
+        popUpUI.SetActive(false);
     }
 
     private void Update()
@@ -64,8 +102,9 @@ public class UIManager : MonoBehaviour
             if (EventSystem.current.IsPointerOverGameObject() == false)
             {
                 miniMapScript.GetComponent<MinimapCamera>().enabled = false;
+                miniMapUI.SetActive(false);
+                popUpUI.SetActive(true);
             }
-
         }
     }
 
@@ -82,9 +121,61 @@ public class UIManager : MonoBehaviour
         voiceUI.SetActive(false);
     }
 
+    // 버튼을 누르면 voiceOnUI 켜기
     public void voiceOn()
     {
         voiceUI.SetActive(true);
         voiceUIOff.SetActive(false);
+    }
+
+    // lunchUI 켜지게 하기
+    public void FoodOn()
+    {
+        foodUI.SetActive(true);
+    }
+
+    // lunchUI 끄게 하기
+    public void FoodOff()
+    {
+        foodUI.SetActive(false);
+    }
+
+    // nofityUI 켜기
+    public void nofityUIOn()
+    {
+        nofityUI.SetActive(true);
+        popUpUI.SetActive(false);
+    }
+
+    // nofityUI 끄기
+    public void nofityUIOff()
+    {
+        nofityUI.SetActive(false);
+        popUpUI.SetActive(true);
+    }
+
+    // number 학번 UI 보이게 켜기
+    public void NumberUIOn()
+    {
+        numberUI.SetActive(true);
+        numberUIOff.SetActive(false);
+        numberShowText.SetActive(true);
+        numberHideText.SetActive(false);
+    }
+
+    // number 학번 UI 안 보이게 끄기
+    public void NumberUIOff()
+    {
+        numberUI.SetActive(false);
+        numberUI.SetActive(true);
+        numberHideText.SetActive(true);
+        numberShowText.SetActive(false);
+    }
+
+
+    // 게임창 나가기
+    public void OnClickOut()
+    {
+        Application.Quit();
     }
 }
