@@ -44,4 +44,24 @@ public class DropdownMa : MonoBehaviour
     {
         
     }
+
+    internal void ClearOptions()
+    {
+        throw new NotImplementedException();
+    }
+
+    internal void AddOptions(object p)
+    {
+        throw new NotImplementedException();
+    }
+
+    internal class OptionData
+    {
+        private string v;
+
+        public OptionData(string v)
+        {
+            this.v = v;
+        }
+    }
 }

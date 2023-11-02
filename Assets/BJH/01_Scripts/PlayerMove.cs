@@ -18,6 +18,11 @@ public class PlayerMove : MonoBehaviourPun
     // nick name
     public Text nickName;
 
+    // 중력
+    float gravity = -9.8f;
+    private Vector3 velocity;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -50,8 +55,15 @@ public class PlayerMove : MonoBehaviourPun
         // dir
         Vector3 dir = new Vector3(h, 0, v);
 
-        // move
+        // 플레이어 이동
         transform.position += dir * speed * Time.deltaTime;
+
+
+        // 중력 적용
+        velocity.y += gravity * Time.deltaTime;
+
+        // 수직 이동
+        cc.Move(velocity * Time.deltaTime);
 
     }
 }
