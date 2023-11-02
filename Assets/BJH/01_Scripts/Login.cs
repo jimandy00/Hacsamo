@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 using System;
 using UnityEngine.Networking;
@@ -10,9 +11,11 @@ public class Login : MonoBehaviour
 {
     public TMP_InputField[] logins; // email, password
     public GameObject loading;
+    public GameObject failLogin;
     void Start()
     {
         loading.SetActive(false);
+        failLogin.SetActive(false);
 
         logins[0].onSubmit.AddListener(delegate { TryLogin(); }); // 이메일을 입력했을 때 TryLogin() 실행
         logins[1].onSubmit.AddListener(delegate { TryLogin(); }); // 패스워드 입력했을 때 TryLogin() 실행
@@ -82,8 +85,18 @@ public class Login : MonoBehaviour
             {
                 // 로그인이 실패하면 오류 메시지를 출력
                 Debug.Log("Error : " + webRequest.error);
+
+                // 아이디나 비밀번호가 틀렸습니다.
+                failLogin.SetActive(true);
+
             }
         }
+    }
+
+    public void ClickCheck()
+    {
+        failLogin.SetActive(false);
+
     }
 
     private AsyncOperation loadOperation;
