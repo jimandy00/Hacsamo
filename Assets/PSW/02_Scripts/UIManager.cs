@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
-using Agora_RTC_Plugin.API_Example.Examples.Advanced.VoiceChanger;
+using static System.Net.Mime.MediaTypeNames;
 
 public class UIManager : MonoBehaviour
 {
