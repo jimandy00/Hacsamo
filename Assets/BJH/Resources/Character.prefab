@@ -1650,7 +1650,7 @@ MonoBehaviour:
   characterBody: {fileID: 2815938557521142308}
   cameraArm: {fileID: 6257964928127839295}
   cam: {fileID: 6257964928127839295}
-  cc: {fileID: 0}
+  cc: {fileID: 2044797725597459246}
 --- !u!114 &5514581815667475966
 MonoBehaviour:
   m_ObjectHideFlags: 0

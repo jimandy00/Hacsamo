@@ -18,12 +18,12 @@ public class AniController : MonoBehaviourPun
     // charactor controller
     public CharacterController cc;
 
-
     Animator animator;
 
     // Start is called before the first frame update
     void Start()
     {
+
 
         // 캐릭터 컨트롤러
         cc = GetComponent<CharacterController>();
@@ -38,6 +38,7 @@ public class AniController : MonoBehaviourPun
         }
 
     }
+
 
     // Update is called once per frame
     void Update()

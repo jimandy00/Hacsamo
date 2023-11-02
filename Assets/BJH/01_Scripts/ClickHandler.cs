@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class ClickHandler : MonoBehaviour
 {
+    public bool isClick = false;
     private void OnMouseDown()
     {
-        // 마우스가 클릭되면
-        Cursor.visible = false;
+        isClick = !isClick;
     }
 }
