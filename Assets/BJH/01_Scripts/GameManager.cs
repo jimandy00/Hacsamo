@@ -36,20 +36,20 @@ public class GameManager : MonoBehaviourPun
         // 마우스 클릭했을 때
         // 마우스 클릭시 해당 위치에 UI가 있으면
         // 마우스 포인터 비활성화
-        if(Input.GetMouseButtonDown(0))
-        {
-            if(EventSystem.current.IsPointerOverGameObject())
-            {
-                Cursor.visible = false;
-            }
-        }
+        //if(Input.GetMouseButtonDown(0))
+        //{
+        //    if (EventSystem.current.IsPointerOverGameObject())
+        //    {
+        //        Cursor.visible = false;
+        //    }
+        //}
 
-        // esc를 누르면
-        // 포인터 활성화
-        if(Input.GetKeyDown(KeyCode.Escape))
-        {
-            Cursor.visible = true;
-        }
+        //// esc를 누르면
+        //// 포인터 활성화
+        //if(Input.GetKeyDown(KeyCode.Escape))
+        //{
+        //    Cursor.visible = true;
+        //}
         
     }
 
