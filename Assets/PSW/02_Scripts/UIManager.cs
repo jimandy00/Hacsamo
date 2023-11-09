@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
+using static System.Net.Mime.MediaTypeNames;
 
 public class UIManager : MonoBehaviour
 {
@@ -35,6 +36,9 @@ public class UIManager : MonoBehaviour
 
     // url 입력
     public string url = "https://www.sogang.ac.kr/bachelor/index.html";
+
+    // url food 입력
+    public string foodUrl = "https://www.sogang.ac.kr/bachelor/onestop/menu.html";
 
 
     // 프로필 시작할 때 꺼두기
@@ -169,21 +173,27 @@ public class UIManager : MonoBehaviour
     public void NumberUIOff()
     {
         numberUI.SetActive(false);
-        numberUI.SetActive(true);
-        numberHideText.SetActive(true);
+        numberUIOff.SetActive(true);
         numberShowText.SetActive(false);
+        numberHideText.SetActive(true);
     }
 
 
     // 게임창 나가기
     public void OnClickOut()
     {
-        Application.Quit();
+        UnityEngine.Application.Quit();
     }
 
-    // url 열기
+    // 공지사항 url 열기
     public void OnClickLink()
     {
-        Application.OpenURL(url);
+        UnityEngine.Application.OpenURL(url);
+    }
+
+    // 서강대학교 식단 url 열기
+    public void OnClickLinkFood()
+    {
+        UnityEngine.Application.OpenURL(foodUrl);
     }
 }
