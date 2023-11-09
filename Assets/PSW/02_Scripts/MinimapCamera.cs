@@ -22,7 +22,7 @@ public class MinimapCamera : MonoBehaviour
         miniMapCam = GetComponent<Camera>();
     }
 
-    
+
     void Update()
     {
         Zoom();
