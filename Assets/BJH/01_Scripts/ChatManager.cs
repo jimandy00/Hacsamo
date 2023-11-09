@@ -18,6 +18,10 @@ public class ChatManager : MonoBehaviourPun
 
     float prevContentH;
 
+
+    // 채팅룸을 클릭하면 플레이어를 이동하지 못하게 하는 방법
+
+
     // Start is called before the first frame update
     void Start()
     {

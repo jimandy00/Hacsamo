@@ -371,7 +371,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2772045590728254928
 Transform:
   m_ObjectHideFlags: 0
@@ -1193,7 +1193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   cam: {fileID: 2772045590728254928}
-  cc: {fileID: 0}
+  cc: {fileID: 2044797725597459246}
   nickName: {fileID: 6523505314702177072}
 --- !u!1 &3382465785650408634
 GameObject:
@@ -1502,6 +1502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ade1b8642b190b45981c88dc0ac6cd7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cam: {fileID: 0}
 --- !u!1 &4127513315935618976
 GameObject:
   m_ObjectHideFlags: 0
@@ -1649,7 +1650,7 @@ MonoBehaviour:
   characterBody: {fileID: 2815938557521142308}
   cameraArm: {fileID: 6257964928127839295}
   cam: {fileID: 6257964928127839295}
-  cc: {fileID: 0}
+  cc: {fileID: 2044797725597459246}
 --- !u!114 &5514581815667475966
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1700,6 +1701,7 @@ GameObject:
   - component: {fileID: 3678430190153433284}
   - component: {fileID: 1224180698753148491}
   - component: {fileID: 6523505314702177072}
+  - component: {fileID: 6405296975446234386}
   m_Layer: 0
   m_Name: NickName
   m_TagString: Untagged
@@ -1769,6 +1771,19 @@ MonoBehaviour:
     m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: "\uB2C9\uB124\uC784"
+--- !u!114 &6405296975446234386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4846886141471910112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ade1b8642b190b45981c88dc0ac6cd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 736682432923263442}
 --- !u!1 &4868323702728475003
 GameObject:
   m_ObjectHideFlags: 0
