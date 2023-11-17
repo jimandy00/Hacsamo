@@ -27,6 +27,11 @@ public class Login : MonoBehaviour
 
     }
 
+    public void OnclickLoginBtn()
+    {
+        TryLogin();
+    }
+
     private void TryLogin()
     {
         if(logins[0].text == "" || logins[1].text == "" )

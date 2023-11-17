@@ -3,24 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using UnityEngine.UI;
+using TMPro;
 
 // wasd키로 플레이어를 움직인다.
 public class PlayerMove : MonoBehaviourPun
 {
     public float speed = 5f;
+    bool isMoving = false;
 
     // camera
     public Transform cam;
+    public Vector3 offset;
+    public float x, y, z;
 
     // charactor controller
     public CharacterController cc;
 
     // nick name
-    public Text nickName;
+    public TMP_Text nickName;
 
     // 중력
     float gravity = -9.8f;
     private Vector3 velocity;
+
+    public Animator animator;
 
 
     // Start is called before the first frame update
@@ -52,18 +58,38 @@ public class PlayerMove : MonoBehaviourPun
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
 
+        isMoving = h != 0f || v != 0f;
+
+        // 움직이지 않으면
+        if (!isMoving)
+        {
+            speed = 0f;
+        }
+        // 움직이면
+        if (isMoving)
+        {
+            // 걸을 때
+            speed = 5f;
+        }
+
+        animator.SetFloat("PlayerMove", speed);
+
         // dir
-        Vector3 dir = new Vector3(h, 0, v);
+        Vector3 dir = new Vector3(h, 0, v).normalized;
 
-        // 플레이어 이동
-        transform.position += dir * speed * Time.deltaTime;
-
+        cc.Move(dir * speed * Time.deltaTime);
 
         // 중력 적용
         velocity.y += gravity * Time.deltaTime;
 
         // 수직 이동
-        cc.Move(velocity * Time.deltaTime);
+        //cc.Move(velocity * Time.deltaTime);
+
+        cam.transform.position = transform.position + offset;
+        cam.transform.rotation = Quaternion.Euler(x, y, z);
+
+
+
 
     }
 }

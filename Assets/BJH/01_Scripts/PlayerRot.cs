@@ -1,27 +1,27 @@
-//using System.Collections;
-//using System.Collections.Generic;
-//using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using Photon.Pun;
 
-//// 마우스 회전으로 플레이어가 회전한다.
-//public class PlayerRot : MonoBehaviour
-//{
-//    // Start is called before the first frame update
-//    void Start()
-//    {
-        
-//    }
+// 마우스 회전으로 플레이어가 회전한다.
+public class PlayerRot : MonoBehaviourPun
+{
+    private Vector3 dir = Vector3.zero;
 
-//    // Update is called once per frame
-//    void Update()
-//    {
-//        // input
-//        float h = Input.GetAxis("Mouse X");
-//        float v = Input.GetAxis("Vertical");
+    private void Update()
+    {
+        // 내 플레이어 가 아니면 걷지 않는다.
+        if (!photonView.IsMine)
+        {
+            return;
+        }
 
-//        // dir
-//        Vector3 dir = new Vector3();
+        dir.x = Input.GetAxis("Horizontal");
+        dir.z = Input.GetAxis("Vertical");
 
-//        // move
-//        transform.position += dir * speed * Time.deltaTime;
-//    }
-//}
+        if (dir != Vector3.zero)
+        {
+            transform.forward = dir;
+        }
+    }
+}
