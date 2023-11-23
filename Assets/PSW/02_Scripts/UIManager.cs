@@ -138,12 +138,14 @@ public class UIManager : MonoBehaviour
     public void FoodOn()
     {
         foodUI.SetActive(true);
+        popUpUI.SetActive(false);
     }
 
     // lunchUI 끄게 하기
     public void FoodOff()
     {
         foodUI.SetActive(false);
+        popUpUI.SetActive(true);
     }
 
     // nofityUI 켜기
